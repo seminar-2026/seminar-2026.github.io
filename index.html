@@ -1,133 +1,1305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Бесплатный семинар: как защитить товарный знак — Невский IP law</title>
-<style>
-  :root{ --blue:#1a4f8b; --dark:#22303c; --grey:#6b7680; --light:#f5f7fa; --line:#e3e8ee; }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Segoe UI',Arial,sans-serif;color:var(--dark);line-height:1.6;background:#fff;}
-  .wrap{max-width:960px;margin:0 auto;padding:0 20px;}
-  header{background:var(--blue);color:#fff;padding:18px 0;}
-  header .brand{font-size:20px;font-weight:700;letter-spacing:.5px;}
-  header .sub{font-size:13px;opacity:.85;}
-  .hero{background:var(--light);padding:48px 0;text-align:center;}
-  .hero h1{font-size:30px;color:var(--blue);margin-bottom:12px;}
-  .hero p{max-width:640px;margin:0 auto;font-size:17px;color:var(--grey);}
-  section{padding:48px 0;}
-  h2{font-size:24px;color:var(--blue);margin-bottom:18px;}
-  .pain{border-left:4px solid var(--blue);background:var(--light);padding:16px 20px;margin:14px 0;border-radius:0 8px 8px 0;}
-  .pain b{display:block;color:var(--dark);margin-bottom:4px;font-size:17px;}
-  .pain span{color:var(--grey);font-size:15px;}
-  .reg{background:var(--blue);color:#fff;text-align:center;padding:56px 0;}
-  .reg h2{color:#fff;}
-  .reg p{max-width:560px;margin:0 auto 8px;font-size:16px;opacity:.92;}
-  .reg a.mailto{color:#ffd76a;font-weight:600;text-decoration:underline;}
-  form{max-width:420px;margin:24px auto 0;background:#fff;padding:28px;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,.15);text-align:left;}
-  label{display:block;font-size:13px;color:var(--grey);margin:10px 0 4px;}
-  input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:6px;font-size:15px;}
-  input:focus{outline:none;border-color:var(--blue);}
-  button{margin-top:18px;width:100%;background:var(--blue);color:#fff;border:0;padding:13px;font-size:16px;font-weight:700;border-radius:6px;cursor:pointer;}
-  button:hover{background:#143f72;}
-  .done{display:none;text-align:center;padding:20px 0;color:var(--blue);font-weight:600;font-size:17px;}
-  footer{background:var(--dark);color:#9aa7b2;text-align:center;padding:28px 0;font-size:13px;}
-footer .legal{text-align:left;margin-bottom:14px;line-height:1.75;}
-footer .legal-name{font-weight:600;color:#cdd6df;font-size:14px;margin-bottom:3px;}
-footer .legal-rows span{margin-right:20px;white-space:nowrap;}
-footer .copy{border-top:1px solid #34414d;padding-top:12px;margin-top:4px;}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nevsky IP Law — Как защитить товарный знак и не потерять марку</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="mask-icon" href="favicon.svg" color="#b18a45">
+  <meta name="theme-color" content="#111317">
+  <meta name="description" content="Бесплатный практический онлайн-семинар Невский IP Law для владельцев брендов в e-commerce: Роспатент, споры на Ozon и WB, закупки в Китае, защита дизайна и ФАС.">
+  <meta property="og:title" content="Семинар: Как защитить товарный знак и не потерять марку | Невский IP Law">
+  <meta property="og:description" content="Практический разбор для владельцев брендов в e-commerce: где теряются права, как правильно зарегистрировать знак и что делать, если бренд уже заняли.">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --ink:#111317;
+      --muted:#6d7077;
+      --paper:#f5f4f0;
+      --white:#fff;
+      --line:#d9d8d3;
+      --gold:#b18a45;
+      --gold2:#d0ad6d;
+      --dark:#15171b;
+      --max:1180px;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:var(--sans);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:auto;padding:0 28px}
+    .topline{height:4px;background:var(--gold)}
+    header{
+      padding:27px 0 24px;
+      background:rgba(245,244,240,.94);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+    .mark{
+      width:38px;height:38px;border:1px solid var(--gold);
+      display:grid;place-items:center;
+      font-family:var(--serif);font-size:18px;
+      position:relative;
+    }
+    .mark:after{content:"";position:absolute;inset:5px;border:1px solid rgba(177,138,69,.4)}
+    .brand-text{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:650}
+    .brand-sub{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em;margin-top:2px}
+    .nav-links{display:flex;gap:26px;align-items:center}
+    .nav-link{font-size:13px;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;white-space:nowrap}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:92px 0 100px;
+      background:
+        radial-gradient(circle at 86% 17%, rgba(177,138,69,.14), transparent 25%),
+        linear-gradient(135deg,#f8f7f3 0%,#efeee9 100%);
+    }
+    .hero:before{
+      content:"IP";
+      position:absolute;right:-25px;top:-72px;
+      font-family:var(--serif);font-size:430px;line-height:1;
+      color:rgba(17,19,23,.025);pointer-events:none;
+    }
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:80px;align-items:end;position:relative}
+    .eyebrow{
+      color:var(--gold);font-size:12px;font-weight:750;
+      letter-spacing:.19em;text-transform:uppercase;margin-bottom:22px
+    }
+    h1{
+      font-family:var(--serif);font-weight:400;
+      font-size:clamp(48px,6.3vw,86px);
+      line-height:.98;letter-spacing:-.045em;
+      margin:0 0 30px;max-width:850px;
+    }
+    h1 em{font-style:italic;color:#3b3c40}
+    .lead{font-size:20px;line-height:1.55;max-width:700px;color:#404249;margin:0}
+    .bullets{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:11px 30px;max-width:760px}
+    .bullets li{position:relative;padding-left:22px;font-size:14px;color:#4c4f55;line-height:1.45}
+    .bullets li:before{
+      content:"";position:absolute;left:0;top:8px;
+      width:9px;height:9px;border:1px solid var(--gold);
+    }
+    .hero-side{border-left:1px solid var(--line);padding-left:34px}
+    .duration{font-family:var(--serif);font-size:34px;margin-bottom:10px}
+    .side-text{font-size:14px;color:var(--muted);max-width:260px}
+    .params{margin:0;padding:0;margin-top:26px;border-top:1px solid var(--line)}
+    .params div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}
+    .params dt{color:var(--muted)}
+    .params dd{margin:0;text-align:right;font-weight:650}
+    .params dd.price{font-family:var(--serif);font-size:17px;color:var(--gold);font-weight:400}
+    .cta{
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--ink);color:white;text-decoration:none;
+      padding:16px 25px;margin-top:30px;
+      font-size:13px;font-weight:750;letter-spacing:.06em;
+      text-transform:uppercase;transition:.2s;
+    }
+    .cta:hover{background:var(--gold)}
+    .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);margin-left:12px}
+    .cta.ghost:hover{background:var(--ink);color:white}
+    .slots{margin-top:24px;font-size:12px;color:var(--muted);max-width:520px}
+    .slots b{color:var(--ink)}
+    .stats{background:var(--dark);color:#bfc0c4;padding:44px 0}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+    .stat{border-left:1px solid #4b4d52;padding-left:20px}
+    .stat strong{display:block;font-family:var(--serif);font-size:30px;font-weight:400;color:#fff}
+    .stat span{font-size:11px;color:#a8a9ad;text-transform:uppercase;letter-spacing:.12em}
+    section{padding:90px 0}
+    .section-head{display:grid;grid-template-columns:.38fr 1fr;gap:60px;margin-bottom:52px}
+    .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:750}
+    h2{font-family:var(--serif);font-size:clamp(38px,4.4vw,58px);font-weight:400;line-height:1.03;letter-spacing:-.03em;margin:0}
+    h2 + p{font-size:17px;color:#5d5f65;max-width:620px;margin:22px 0 0}
+    .program{background:var(--white)}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .card{background:var(--white);padding:46px 42px}
+    .num{font-family:var(--serif);font-size:22px;color:var(--gold);margin-bottom:38px}
+    .card h3{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.1;margin:0 0 20px}
+    .card p{font-size:15px;color:#575960;max-width:500px;margin:0}
+    .takeaways{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:9px}
+    .takeaways li{position:relative;padding-left:20px;font-size:13.5px;line-height:1.45;color:#4c4f55}
+    .takeaways li:before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;background:var(--gold);opacity:.7}
+    .speaker{margin-top:25px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .speaker strong{display:block;color:var(--ink);font-size:13px;margin-bottom:3px}
+    .speaker span{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+    .accent{padding:80px 0;background:var(--dark);color:white}
+    .accent-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+    .accent h2{color:white;max-width:650px}
+    .accent p{color:#bfc0c4;font-size:16px;max-width:480px}
+    .audience{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:0}
+    .audience li{padding:20px 0;border-top:1px solid #34363b}
+    .audience b{display:block;font-family:var(--serif);font-size:21px;font-weight:400;color:#fff}
+    .audience em{display:block;font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);margin:5px 0 9px}
+    .audience span{font-size:14px;color:#a8a9ad;line-height:1.5}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:32px}
+    .fact{border-left:1px solid #4b4d52;padding-left:20px}
+    .fact strong{display:block;font-family:var(--serif);font-size:28px;font-weight:400;color:#fff}
+    .fact span{font-size:11px;color:#a8a9ad;text-transform:uppercase;letter-spacing:.12em}
+    .risks{margin-top:56px;padding-top:40px;border-top:1px solid #34363b}
+    .risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:26px}
+    .risk strong{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--gold2);display:block}
+    .risk b{display:block;font-size:14px;color:#fff;margin:10px 0 8px;font-weight:600}
+    .risk span{font-size:13px;color:#a8a9ad;line-height:1.5;display:block}
+    .risk i{display:block;font-style:normal;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#c96a5a;margin-top:12px}
+    .reviews{background:var(--paper)}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .review{background:var(--white);padding:38px 34px 34px;display:flex;flex-direction:column}
+    .quote{font-family:var(--serif);font-size:62px;line-height:.65;color:var(--gold);height:42px}
+    .review p{font-family:var(--serif);font-size:18px;line-height:1.48;margin:10px 0 18px;color:#292b30}
+    .review .body{font-family:var(--sans);font-size:14px;line-height:1.6;color:#575960;margin:0 0 20px}
+    .review .result{font-size:13px;color:#4c6b45;background:#f0f5ed;border-left:3px solid #718965;padding:9px 12px;margin:0 0 20px}
+    .review-meta{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:3px}
+    .review-meta strong{font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    .review-meta span{font-size:11px;color:var(--muted)}
+    .review-note{font-size:11px;color:#85868b;margin:18px 0 0;line-height:1.5}
+    .registration{background:#e9e7e1}
+    .reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+    .reg-copy p{font-size:16px;color:#5d5f65;max-width:500px}
+    .included{list-style:none;margin:30px 0 0;padding:0;max-width:500px}
+    .included li{position:relative;padding:9px 0 9px 22px;font-size:14px;color:#4c4f55;border-bottom:1px solid #dcdad4}
+    .included li:before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;background:var(--gold)}
+    .form{background:white;padding:38px;box-shadow:0 15px 45px rgba(0,0,0,.06)}
+    label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin:0 0 8px}
+    input[type=text],input[type=email],input[type=tel],textarea{
+      width:100%;border:0;border-bottom:1px solid #bfc0c2;
+      padding:13px 0 12px;background:transparent;
+      font:inherit;font-size:16px;outline:none;margin-bottom:24px;
+      resize:vertical;
+    }
+    input:focus,textarea:focus{border-bottom-color:var(--gold)}
+    .opt{font-size:12px;font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted);margin-bottom:8px}
+    .consent{display:flex;gap:11px;align-items:flex-start;margin:2px 0 24px}
+    .consent input{margin:2px 0 0;flex-shrink:0;width:15px;height:15px;accent-color:var(--gold)}
+    .consent label{text-transform:none;letter-spacing:0;font-weight:400;font-size:12px;color:var(--muted);margin:0;line-height:1.5}
+    .submit{
+      width:100%;border:0;background:var(--gold);color:white;
+      padding:17px;font:inherit;font-size:12px;font-weight:750;
+      letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+    }
+    .submit:hover{background:#987331}
+    .fine{font-size:11px;color:#85868b;margin:15px 0 0;line-height:1.5}
+    .direct{margin-top:28px;font-size:14px}
+    .direct a{font-weight:700;text-decoration:none;border-bottom:1px solid var(--gold)}
+    .success{display:none;padding:16px;background:#f0f5ed;border-left:3px solid #718965;font-size:14px;margin-top:15px}
+    footer{background:var(--dark);color:#bfc0c4;padding:55px 0 35px}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+    .footer-brand{color:white;font-family:var(--serif);font-size:25px;margin-bottom:18px}
+    .footer-nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:22px}
+    .footer-nav a{font-size:11px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;color:#a8a9ad}
+    .footer-nav a:hover{color:white}
+    footer p{font-size:12px;line-height:1.8;margin:0}
+    .copyright{border-top:1px solid #34363b;margin-top:45px;padding-top:22px;font-size:11px;color:#85878d}
+
+    /* ---------- speakers ---------- */
+    .speakers{background:var(--white)}
+    .speakers-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .speaker-card{background:var(--white);padding:40px 38px;display:flex;flex-direction:column}
+    .badge{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:750;margin-bottom:14px}
+    .speaker-card h3{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.08;margin:0 0 10px}
+    .role{font-size:13px;color:#5d5f65;margin:0 0 20px;line-height:1.45}
+    .block{font-size:12.5px;background:var(--paper);border-left:3px solid var(--gold);padding:11px 14px;margin:0 0 18px;color:var(--ink);line-height:1.45}
+    .exp{font-size:12px;color:var(--muted);margin:0 0 18px}
+    .compet{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:7px}
+    .compet li{position:relative;padding-left:16px;font-size:13px;line-height:1.45;color:#4c4f55}
+    .compet li:before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;background:var(--gold);opacity:.75}
+    .cases{font-size:12px;color:var(--muted);margin:auto 0 0;padding-top:16px;border-top:1px solid var(--line);line-height:1.5}
+    .cases b{color:var(--ink);font-weight:700}
+
+    /* ---------- materials ---------- */
+    .materials{background:var(--paper)}
+    .docs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .doc{background:var(--white);padding:38px 34px;display:flex;flex-direction:column}
+    .doc .top{display:flex;justify-content:space-between;gap:14px;padding-bottom:14px;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+    .doc .top .cat{color:var(--gold);font-weight:750}
+    .doc .top .fmt{color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.04em;white-space:nowrap}
+    .doc h3{font-family:var(--serif);font-size:25px;font-weight:400;line-height:1.14;margin:20px 0 10px}
+    .doc .sub{font-size:13px;color:var(--gold);font-weight:600;margin:0 0 12px;line-height:1.4}
+    .doc p{font-size:14px;color:#575960;margin:0 0 18px;line-height:1.55}
+    .contains{background:var(--paper);padding:14px 16px;margin:0 0 24px}
+    .contains b{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:750;margin-bottom:8px}
+    .contains span{display:block;font-size:12.5px;color:#4c4f55;line-height:1.45;position:relative;padding-left:14px;margin-bottom:4px}
+    .contains span:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--gold);opacity:.7}
+    .doc .acts{margin-top:auto}
+    .btn-open{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:12px 18px;font:inherit;font-size:11px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
+    .btn-open:hover{background:var(--ink);color:#fff}
+    .banner{margin-top:52px;border:1px solid var(--line);background:var(--white);padding:34px 38px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .banner h3{font-family:var(--serif);font-size:24px;font-weight:400;margin:0 0 8px;line-height:1.15}
+    .banner p{font-size:14px;color:#5d5f65;margin:0;max-width:620px}
+    .modal{position:fixed;inset:0;z-index:60;background:rgba(17,19,23,.82);display:none;align-items:center;justify-content:center;padding:24px}
+    .modal.open{display:flex}
+    .modal-box{background:var(--white);max-width:760px;width:100%;max-height:88vh;overflow:auto;padding:36px 40px;position:relative}
+    .modal-close{position:absolute;top:18px;right:20px;border:0;background:transparent;font-size:26px;line-height:1;color:var(--muted);cursor:pointer;padding:4px}
+    .modal-close:hover{color:var(--ink)}
+    .modal-box h3{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.1;margin:12px 46px 8px 0}
+    .doc-sec{border-top:1px solid var(--line);padding:22px 0}
+    .doc-sec h4{font-family:var(--serif);font-size:20px;font-weight:400;margin:0 0 14px;line-height:1.2}
+    .doc-sec ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+    .doc-sec li{position:relative;padding-left:26px;font-size:14px;line-height:1.5;color:#4c4f55}
+    .doc-sec li .n{position:absolute;left:0;top:2px;font-size:11px;color:var(--gold);font-weight:750;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .modal-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;margin-top:6px}
+    .modal-foot .fine{margin:0;max-width:420px}
+    .btn-copy{border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:12px 18px;font:inherit;font-size:11px;font-weight:750;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+    .btn-copy:hover{border-color:var(--gold);color:var(--gold)}
+
+    /* ---------- risk checker ---------- */
+    .checker{background:var(--white)}
+    .checker-wrap{max-width:780px;margin:0 auto;border:1px solid var(--line);background:var(--paper);padding:38px 40px}
+    .q-progress{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+    .q-bar{height:3px;background:#e2e0da;margin-bottom:30px}
+    .q-bar i{display:block;height:100%;width:25%;background:var(--gold);transition:width .3s}
+    .checker h3{font-family:var(--serif);font-size:27px;font-weight:400;line-height:1.15;margin:0 0 24px}
+    .opts{display:grid;gap:10px}
+    .opt-btn{display:flex;gap:14px;align-items:flex-start;width:100%;text-align:left;background:var(--white);border:1px solid var(--line);padding:15px 17px;font:inherit;font-size:14px;line-height:1.45;color:#3f4249;cursor:pointer;transition:.15s}
+    .opt-btn:hover{border-color:var(--gold);background:#fbfaf7}
+    .opt-btn .letter{flex-shrink:0;width:24px;height:24px;border:1px solid var(--line);display:grid;place-items:center;font-size:11px;font-weight:750;color:var(--gold);margin-top:1px}
+    .q-back{margin-top:24px;border:0;background:transparent;padding:0;font:inherit;font-size:12px;color:var(--muted);cursor:pointer;text-decoration:underline}
+    .q-back:hover{color:var(--ink)}
+    .vresult{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);padding:30px}
+    .vresult.low{border-left-color:#5c7a52}
+    .vresult.mid{border-left-color:#9a7524}
+    .vresult.high{border-left-color:#9e3b2c}
+    .vresult .lvl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:750}
+    .vresult .val{font-family:var(--serif);font-size:38px;line-height:1.05;margin:8px 0 0}
+    .vresult.low .val{color:#5c7a52}
+    .vresult.mid .val{color:#9a7524}
+    .vresult.high .val{color:#9e3b2c}
+    .vresult .verdict{font-size:16px;font-weight:600;margin:18px 0 10px;line-height:1.35}
+    .vresult .desc{font-size:14px;color:#575960;margin:0;line-height:1.55}
+    .result-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .q-reset{border:0;background:transparent;font:inherit;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:0;white-space:nowrap}
+    .q-reset:hover{color:var(--ink)}
+    .resend{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+    .resend p{font-size:13px;color:#5d5f65;margin:0 0 14px}
+    .resend-row{display:flex;gap:12px;flex-wrap:wrap}
+    .resend input[type=text]{flex:1;min-width:220px;border:1px solid var(--line);background:var(--white);padding:14px 16px;font:inherit;font-size:14px;margin:0}
+    .resend input[type=text]:focus{border-color:var(--gold)}
+
+    /* ---------- about ---------- */
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+    .about .subname{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:750;margin:16px 0 0}
+    .about p{font-size:16px;color:#4c4f55;max-width:520px;line-height:1.6;margin:22px 0 0}
+    .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+    .astat{background:var(--white);padding:28px 26px}
+    .astat strong{display:block;font-family:var(--serif);font-size:34px;font-weight:400;color:var(--gold);line-height:1.05}
+    .astat b{display:block;font-size:12.5px;margin:10px 0 7px}
+    .astat span{font-size:12px;color:var(--muted);line-height:1.45;display:block}
+    .comps{margin-top:58px;padding-top:44px;border-top:1px solid var(--line)}
+    .comps h3{font-family:var(--serif);font-size:30px;font-weight:400;margin:0 0 28px}
+    .comps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .comp{background:var(--white);padding:28px 24px}
+    .comp i{font-style:normal;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--gold);font-weight:700;display:block;margin-bottom:10px}
+    .comp b{display:block;font-size:14px;line-height:1.3;margin:0 0 9px}
+    .comp span{font-size:12.5px;color:var(--muted);line-height:1.5;display:block}
+
+    /* ---------- faq ---------- */
+    .faq{background:var(--white)}
+    .faq-wrap{max-width:820px;margin:0 auto}
+    .faq details{border-top:1px solid var(--line)}
+    .faq details:last-of-type{border-bottom:1px solid var(--line)}
+    .faq summary{list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;font-family:var(--serif);font-size:21px;line-height:1.25}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary:after{content:"";position:absolute;right:8px;top:33px;width:11px;height:11px;border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);transform:rotate(45deg);transition:transform .2s}
+    .faq details[open] summary:after{transform:rotate(225deg)}
+    .faq summary:hover{color:var(--gold)}
+    .ans{padding:0 44px 26px 0;font-size:15px;line-height:1.6;color:#4c4f55;margin:0}
+
+    @media(max-width:800px){
+      .hero{padding:65px 0 75px}
+      .hero-grid,.section-head,.reg-grid,.accent-grid{grid-template-columns:1fr;gap:35px}
+      .hero-side{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}
+      .reviews-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      section{padding:65px 0}
+      .facts,.stats-grid,.risk-grid{grid-template-columns:1fr;gap:20px}
+      .bullets{grid-template-columns:1fr}
+      .speakers-grid,.docs,.about-grid,.comps-grid,.about-stats{grid-template-columns:1fr}
+      .checker-wrap,.modal-box{padding:26px 20px}
+      .banner{flex-direction:column;align-items:flex-start;padding:26px 22px}
+      .nav-link:not(.nav-link--cta){display:none}
+      .cta.ghost{margin-left:0;margin-top:12px}
+      .form{padding:28px 22px}
+      .footer-grid{grid-template-columns:1fr;gap:25px}
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="brand">Невский IP law</div>
-    <div class="sub">юридическая практика по интеллектуальной собственности</div>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="wrap">
-    <h1>Бесплатный семинар: «Как защитить товарный знак и не потерять марку»</h1>
-    <p>Практический разбор для владельцев брендов в e-commerce: где теряются права, как правильно зарегистрировать знак и что делать, если бренд уже заняли. 90 минут, без теории — только рабочие сценарии.</p>
-  </div>
-</div>
-
-<section id="program">
-  <div class="wrap">
-    <h2>Программа семинара</h2>
-    <div class="pain"><b>Роспатент: где теряются права на бренд</b><span>Типичные ошибки при подаче и экспертизе заявок, из-за которых знак не регистрируется или оспаривается. Как проверить название до подачи и выстроить стратегию, если заявку отклонили.</span></div>
-    <div class="pain"><b>Ozon: споры за товарные знаки внутри маркетплейса</b><span>Как блокируют карточки и бренды на Ozon по жалобам конкурентов, как оспаривать чужие заявки и защищать свою марку — с примерами из практики.</span></div>
-  </div>
-</section>
-
-<div class="reg" id="register">
-  <div class="wrap">
-    <h2>Регистрация на семинар</h2>
-    <p>Количество мест ограничено. Оставьте контакты — подтвердим участие по email или телефону.</p>
-    <form id="leadForm">
-      <label for="name">Ваше имя</label>
-      <input type="text" id="name" name="name" required autocomplete="name">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required autocomplete="email">
-      <label for="phone">Телефон</label>
-      <input type="tel" id="phone" name="phone" required autocomplete="tel">
-      <button type="submit">Зарегистрироваться</button>
-    </form>
-    <div class="done" id="done">Заявка принята. Мы свяжемся с вами в ближайшее время.</div>
-    <p style="margin-top:14px;font-size:13px;opacity:.8;">или напишите напрямую: <a class="mailto" href="mailto:seminar@litman.ru">seminar@litman.ru</a></p>
-  </div>
-</div>
-
-<footer>
-  <div class="wrap">
-    <div class="legal">
-      <div class="legal-name">ООО «Юридическое общество имени Александра Невского» (бренд — Nevsky IP Law)</div>
-      <div class="legal-rows"><span>ОГРН: 1107746202233</span><span>ИНН: 7706733891</span></div>
-      <div>Юридический адрес: 119607, г. Москва, Раменский бульвар, д. 1</div>
-      <div>E-mail: <a href="mailto:seminar@litman.ru" style="color:#9aa7b2;">seminar@litman.ru</a></div>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#">
+        <span class="mark">N</span>
+        <span><span class="brand-text">Nevsky IP Law</span><span class="brand-sub">юридическая практика по интеллектуальной собственности</span></span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="#program">Программа</a>
+        <a class="nav-link" href="#speakers">Спикеры</a>
+        <a class="nav-link" href="#materials">Материалы</a>
+        <a class="nav-link" href="#for-whom">Для кого</a>
+        <a class="nav-link" href="#risk-checker">Тест рисков</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link nav-link--cta" href="#registration">Зарегистрироваться</a>
+      </div>
     </div>
-    <div class="copy">© Невский IP law — семинар для предпринимателей и e-commerce</div>
-  </div>
-</footer>
+  </header>
 
-<script>
-(function(){
-  var WORKER = "https://seminar-catch.seminar-catch.workers.dev";
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Бесплатный практический онлайн-семинар</div>
+          <h1>Как защитить товарный знак <em>и не потерять марку</em></h1>
+          <p class="lead">Практический разбор для владельцев брендов в e-commerce: где теряются права, как правильно зарегистрировать знак и что делать, если бренд уже заняли. 90 минут, без теории — только рабочие сценарии.</p>
+          <ul class="bullets">
+            <li>Где ошибаются в Роспатенте и как спасти заявку</li>
+            <li>Блокировки карточек на Ozon и снятие претензий</li>
+            <li>Защита бренда при закупках в Китае (CNIPA, ТРОИС)</li>
+            <li>Защита дизайна упаковки и контента от плагиата</li>
+            <li>Недобросовестная конкуренция и защита через ФАС</li>
+            <li>Живой разбор кейсов участников в прямом эфире</li>
+          </ul>
+          <a class="cta" href="#registration">Зарегистрироваться бесплатно →</a>
+          <a class="cta ghost" href="#program">Изучить программу</a>
+          <p class="slots"><b>Количество мест ограничено</b> форматом интерактивного разбора. Участие бесплатное.</p>
+        </div>
+        <div class="hero-side">
+          <div class="duration">90 минут</div>
+          <div class="side-text">Без теории — только рабочие сценарии, реальные точки риска и алгоритмы действий.</div>
+          <dl class="params">
+            <div><dt>Длительность</dt><dd>90 минут</dd></div>
+            <div><dt>Формат</dt><dd>Онлайн (интерактив)</dd></div>
+            <div><dt>Аудитория</dt><dd>Селлеры e-com и бренды</dd></div>
+            <div><dt>Стоимость</dt><dd class="price">0 ₽</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-  function beacon(path, data){
-    try{
-      var opts = {method: data ? 'POST' : 'GET', keepalive: true};
-      if(data) opts.headers = {'Content-Type':'application/x-www-form-urlencoded'};
-      fetch(WORKER + path, opts).catch(function(){});
-    }catch(e){}
-  }
+    <div class="stats">
+      <div class="wrap stats-grid">
+        <div class="stat"><strong>90 мин</strong><span>Чистая юридическая практика без воды</span></div>
+        <div class="stat"><strong>Роспатент</strong><span>Разбор ошибок при экспертизе заявок</span></div>
+        <div class="stat"><strong>Ozon &amp; WB</strong><span>Снятие необоснованных блокировок</span></div>
+        <div class="stat"><strong>до 5 млн ₽</strong><span>Максимальная компенсация за чужой знак</span></div>
+      </div>
+    </div>
 
-  // просмотр страницы: IP, UA, время, источник
-  beacon('/view?ref=' + encodeURIComponent(document.referrer || 'direct'), null);
+    <section class="program" id="program">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Программа · 90 минут</div>
+          <div>
+            <h2>Шесть блоков: от экспертизы Роспатента до разбора ваших кейсов.</h2>
+            <p>Комплексный разбор защиты бизнеса: от регистрации в Роспатенте и защиты на Ozon до поставок из Китая, патентования дизайна и борьбы с недобросовестной конкуренцией в ФАС.</p>
+          </div>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="num">01</div>
+            <h3>Роспатент: где теряются права на бренд</h3>
+            <p>Типичные ошибки при подаче и экспертизе заявок, из-за которых знак не регистрируется или оспаривается. Как проверить название до подачи и выстроить стратегию, если заявку отклонили.</p>
+            <ul class="takeaways">
+              <li>Как выявить схожие до степени смешения обозначения ещё до подачи заявки в ФИПС</li>
+              <li>Подбор классов МКТУ: почему селлеры часто выбирают не те классы и остаются без защиты</li>
+              <li>Что делать при получении предварительного отказа из Роспатента</li>
+              <li>Письма-согласия, исключение неохраняемых элементов и корректировка перечня товаров</li>
+            </ul>
+            <div class="speaker"><strong>Александр Литман, патентный поверенный РФ № 1842</strong><span>Блок 1 · Экспертиза и регистрация</span></div>
+          </article>
 
-  var form = document.getElementById('leadForm');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var f = new FormData(form);
-    var payload = {
-      name: (f.get('name')||'').toString().trim(),
-      email: (f.get('email')||'').toString().trim(),
-      phone: (f.get('phone')||'').toString().trim()
+          <article class="card">
+            <div class="num">02</div>
+            <h3>Ozon: споры за товарные знаки внутри маркетплейса</h3>
+            <p>Как блокируют карточки и бренды на Ozon по жалобам конкурентов, как оспаривать чужие заявки и защищать свою марку — с примерами из практики.</p>
+            <ul class="takeaways">
+              <li>Механика подачи жалоб через Ozon Brand ID и систему обращений правообладателей</li>
+              <li>Патентный троллинг и недобросовестные конкуренты: как блокируют бестселлеры накануне сезона</li>
+              <li>Встречные возражения: какие документы принимает юридический отдел Ozon для разблокировки</li>
+              <li>Взыскание компенсаций по ст. 1515 ГК РФ: от 10 тыс. до 5 млн рублей за нарушение прав</li>
+            </ul>
+            <div class="speaker"><strong>Екатерина Воронова, руководитель судебной практики e-commerce</strong><span>Блок 2 · Защита на маркетплейсах</span></div>
+          </article>
+
+          <article class="card">
+            <div class="num">03</div>
+            <h3>Международная регистрация: защита бренда при работе с Китаем и экспорте</h3>
+            <p>Как не потерять бренд на таможне, защитить торговую марку при контрактном производстве в Китае и выбрать между Мадридской системой и национальными заявками.</p>
+            <ul class="takeaways">
+              <li>Мадридская система (WIPO) против прямых заявок в Китае (CNIPA), ОАЭ, Турции и СНГ</li>
+              <li>«Захват марки фабрикой»: почему производитель регистрирует ваш знак на себя и как этого не допустить</li>
+              <li>Таможенный реестр (ТРОИС): как официально запретить ввоз неавторизованного товара в РФ</li>
+              <li>Договоры контрактного производства (OEM / ODM) с закреплением IP-прав</li>
+            </ul>
+            <div class="speaker"><strong>Михаил Романов, советник по международному праву</strong><span>Блок 3 · Трансграничная защита и ВЭД</span></div>
+          </article>
+
+          <article class="card">
+            <div class="num">04</div>
+            <h3>Защита дизайна упаковки, карточек и смежных авторских прав</h3>
+            <p>Когда товарного знака недостаточно: как защитить уникальную форму товара, упаковку, инфографику и фотографии карточек от копирования на маркетплейсах.</p>
+            <ul class="takeaways">
+              <li>Патент на промышленный образец: форма бутылки, коробки, крой одежды и дизайн изделия</li>
+              <li>Кража инфографики и фотосессий: взыскание от 10 000 до 5 000 000 ₽ по ст. 1301 ГК РФ</li>
+              <li>Ошибки в работе с дизайнерами: почему чек из «Мой налог» не подтверждает передачу прав</li>
+              <li>Депонирование и цифровая фиксация авторства до публикации товара на маркетплейсе</li>
+            </ul>
+            <div class="speaker"><strong>Анна Соколова, старший юрист по авторскому праву</strong><span>Блок 4 · Промышленные образцы и контент</span></div>
+          </article>
+
+          <article class="card">
+            <div class="num">05</div>
+            <h3>Недобросовестная конкуренция: когда ФАС защищает быстрее судов</h3>
+            <p>Статьи 14.4 и 14.6 Закона «О защите конкуренции». Как наказывать конкурентов за паразитирование на вашем бренде и отбиваться от патентного шантажа.</p>
+            <ul class="takeaways">
+              <li>Статья 14.4 Закона № 135-ФЗ: запрет недобросовестного приобретения исключительных прав</li>
+              <li>Статья 14.6: смешение с деятельностью конкурента, копирование фирменного стиля и цветов</li>
+              <li>Оборотные штрафы ФАС до 15% от выручки за недобросовестную конкуренцию</li>
+              <li>Как решение ФАС аннулирует регистрацию знака сквоттера без многолетних судов</li>
+            </ul>
+            <div class="speaker"><strong>Александр Литман, управляющий партнёр «Невский IP Law»</strong><span>Блок 5 · Антимонопольная защита и ФАС</span></div>
+          </article>
+
+          <article class="card">
+            <div class="num">06</div>
+            <h3>Практикум: экспресс-разбор кейсов участников и Q&amp;A</h3>
+            <p>Индивидуальный аудит торговых марок слушателей семинара, ответы на вопросы и готовый пошаговый план защиты.</p>
+            <ul class="takeaways">
+              <li>Прямой аудит брендов, предложенных участниками при регистрации</li>
+              <li>Экспресс-проверка названий по базам зарегистрированных знаков</li>
+              <li>Разбор полученных досудебных претензий и писем счастья</li>
+              <li>Ответы на персональные вопросы селлеров в режиме реального времени</li>
+            </ul>
+            <div class="speaker"><strong>Все эксперты практики «Невский IP Law»</strong><span>Блок 6 · Интерактив и разбор ситуаций</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="speakers" id="speakers">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Спикеры семинара</div>
+          <div>
+            <h2>Ведущие эксперты практики «Невский IP Law».</h2>
+            <p>Каждый блок программы ведёт профильный юрист или патентный поверенный с узкой многолетней практикой в Палате по патентным спорам, судах и на маркетплейсах.</p>
+          </div>
+        </div>
+        <div class="speakers-grid">
+          <article class="speaker-card">
+            <span class="badge">Патентный поверенный РФ № 1842</span>
+            <h3>Александр Литман</h3>
+            <p class="role">Управляющий партнёр «Невский IP Law», патентный поверенный РФ</p>
+            <p class="block">Ведёт блоки: 01 (Ошибки в Роспатенте) и 05 (Недобросовестная конкуренция и ФАС)</p>
+            <p class="exp"><b>Опыт:</b> 16 лет практики в сфере интеллектуальной собственности</p>
+            <ul class="compet">
+              <li>Стратегия регистрации товарных знаков в Роспатенте</li>
+              <li>Палата по патентным спорам (ППС) и Суд по интеллектуальным правам (СИП)</li>
+              <li>Дела о недобросовестной конкуренции в ФАС России</li>
+            </ul>
+            <p class="cases"><b>Практика:</b> более 700 зарегистрированных знаков, 40+ побед в ППС и СИП по аннулированию недобросовестных знаков.</p>
+          </article>
+
+          <article class="speaker-card">
+            <span class="badge">Эксперт по маркетплейсам</span>
+            <h3>Екатерина Воронова</h3>
+            <p class="role">Руководитель практики разрешения споров в e-commerce, судебный юрист</p>
+            <p class="block">Ведёт блок: 02 (Ozon: споры за товарные знаки внутри маркетплейса)</p>
+            <p class="exp"><b>Опыт:</b> 11 лет судебного представительства по спорам на Ozon и WB</p>
+            <ul class="compet">
+              <li>Разблокировка брендов и карточек в Ozon Brand ID</li>
+              <li>Взыскание компенсаций по ст. 1515 ГК РФ (до 5 млн ₽)</li>
+              <li>Отражение атак патентных троллей и сквоттеров</li>
+            </ul>
+            <p class="cases"><b>Практика:</b> разблокировано свыше 250 карточек-бестселлеров, снижено необоснованных претензий на сумму свыше 80 млн ₽.</p>
+          </article>
+
+          <article class="speaker-card">
+            <span class="badge">Международная регистрация</span>
+            <h3>Михаил Романов</h3>
+            <p class="role">Советник практики по международному праву и трансграничной защите IP</p>
+            <p class="block">Ведёт блок: 03 (Международная защита и закупки в Китае)</p>
+            <p class="exp"><b>Опыт:</b> 12 лет сопровождения внешнеэкономической деятельности и IP</p>
+            <ul class="compet">
+              <li>Международная регистрация по Мадридской системе (WIPO)</li>
+              <li>Регистрация знаков в Китае (CNIPA), ОАЭ, Турции и странах ЕАЭС</li>
+              <li>Таможенный реестр (ТРОИС) и пресечение контрафакта на границе</li>
+            </ul>
+            <p class="cases"><b>Практика:</b> защитил экспортные поставки 30+ российских производств и пресек захват брендов китайскими фабриками.</p>
+          </article>
+
+          <article class="speaker-card">
+            <span class="badge">Защита дизайна и контента</span>
+            <h3>Анна Соколова</h3>
+            <p class="role">Старший юрист практики авторского права и промышленного дизайна</p>
+            <p class="block">Ведёт блок: 04 (Защита дизайна, упаковки и авторских прав)</p>
+            <p class="exp"><b>Опыт:</b> 9 лет в спорах по авторским правам и промышленным образцам</p>
+            <ul class="compet">
+              <li>Патентование формы товара и упаковки (промышленные образцы)</li>
+              <li>Защита фотосессий, инфографики и контента карточек от копирования</li>
+              <li>Договоры авторского заказа с дизайнерами и отчуждение прав</li>
+            </ul>
+            <p class="cases"><b>Практика:</b> выиграно более 50 исков по фактам кражи авторских карточек и плагиата упаковок на маркетплейсах.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="accent" id="for-whom">
+      <div class="wrap">
+        <div class="accent-grid">
+          <div>
+            <div class="kicker">Кому необходимо участие</div>
+            <h2>Для тех, кто уже продаёт или собирается запускать бренд в e-commerce.</h2>
+            <p>Семинар разработан специально для бизнеса в сфере электронной торговли, где цена ошибки в товарном знаке — потеря магазина и судебные иски.</p>
+            <div class="facts">
+              <div class="fact"><strong>90</strong><span>минут</span></div>
+              <div class="fact"><strong>6</strong><span>практических блоков</span></div>
+              <div class="fact"><strong>0 ₽</strong><span>лишней теории</span></div>
+            </div>
+          </div>
+          <div>
+            <ul class="audience">
+              <li>
+                <b>Селлеры Ozon и Wildberries</b>
+                <em>Продаёте под своим названием, но свидетельства Роспатента пока нет</em>
+                <span>Вы рискуете потерять топовые карточки с тысячами отзывов, если конкурент или сквоттер подаст заявку на аналогичное обозначение раньше вас.</span>
+              </li>
+              <li>
+                <b>Владельцы брендов и СТМ</b>
+                <em>Производители, импортёры и создатели торговых марок</em>
+                <span>Инвестируете в маркетинг и упаковку. Без свидетельства Роспатента в нужных классах МКТУ любая реклама работает на будущих патентных рейдеров.</span>
+              </li>
+              <li>
+                <b>Предприниматели под атакой</b>
+                <em>Получили досудебную претензию или блокировку карточек</em>
+                <span>Поймёте, как грамотно контратаковать, снять блокировку через поддержку маркетплейса и оспорить чужую регистрацию в Палате по патентным спорам.</span>
+              </li>
+              <li>
+                <b>Директора по e-commerce</b>
+                <em>Управляющие магазинами и масштабирующие продажи</em>
+                <span>Получите юридический протокол безопасности: как проверять названия перед закупкой партий и не нарушить чужие исключительные права.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="risks">
+          <div class="kicker">Юридические реалии e-commerce</div>
+          <div class="risk-grid">
+            <div class="risk">
+              <strong>до 100% оборота</strong>
+              <b>Моментальная блокировка на Ozon</b>
+              <span>Маркетплейс блокирует карточки по формальной жалобе любого лица со свидетельством на сходный знак. Разблокировка без юристов занимает месяцы.</span>
+              <i>Потеря позиций в выдаче</i>
+            </div>
+            <div class="risk">
+              <strong>до 5 000 000 ₽</strong>
+              <b>Иски и компенсации по ст. 1515 ГК РФ</b>
+              <span>Закон позволяет правообладателю взыскать с селлера от 10 000 до 5 000 000 ₽ либо двукратную стоимость всей реализованной партии товара.</span>
+              <i>Прямые финансовые потери</i>
+            </div>
+            <div class="risk">
+              <strong>сотни тысяч ₽</strong>
+              <b>Вынужденный ребрендинг склада</b>
+              <span>Если бренд признан чужим, весь товар на складах маркетплейсов подлежит утилизации или перемаркировке за счёт продавца.</span>
+              <i>Уничтожение репутации товара</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Отзывы</div>
+          <div>
+            <h2>Что участники отмечают в формате семинара.</h2>
+            <p>Реальные истории предпринимателей, которые защитили свои бренды, сняли блокировки карточек на маркетплейсах и сохранили бизнес благодаря рекомендациям экспертов. Средняя оценка пользы семинара — 4.9 из 5.0.</p>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review">
+            <div class="quote">“</div>
+            <p>Разблокировали флагманскую карточку на Ozon за 4 дня благодаря алгоритму Екатерины Вороновой.</p>
+            <p class="body">Пришёл на семинар в панике: конкурент прислал через юристов Ozon требование удалить карточку с оборотом 4 млн в месяц, заявив, что наше название похоже на его старый товарный знак. На эфире Екатерина разобрала похожий кейс и дала чёткую структуру встречного возражения. Мы составили ответ по её шаблону, приложили доказательства непрерывного использования — Ozon снял блокировку без суда.</p>
+            <p class="result">Карточка возвращена в выдачу, продажи не просели</p>
+            <div class="review-meta"><strong>Дмитрий Ковалев</strong><span>Основатель бренда «Nordic Home» · Топ-10 селлер Ozon в категории «Интерьер»</span></div>
+          </article>
+          <article class="review">
+            <div class="quote">“</div>
+            <p>Александр Литман разобрал нашу заявку в прямом эфире и нашёл ошибку в МКТУ, которая стоила бы нам отказа.</p>
+            <p class="body">Думала, что регистрация товарного знака — это просто заполнить форму на Госуслугах. Подала заявку сама и полгода ждала. Отправила бренд в чат на разбор: Александр за три минуты показал, что 3-й класс косметики пересекается со старым знаком фармкомпании, о котором мы даже не подозревали, и предложил скорректировать формулировку до вынесения официального отказа.</p>
+            <p class="result">Получено официальное свидетельство Роспатента</p>
+            <div class="review-meta"><strong>Елена Васильева</strong><span>Создатель бренда уходовой косметики «Aura Lab» · Продажи на WB и в Золотом Яблоке</span></div>
+          </article>
+          <article class="review">
+            <div class="quote">“</div>
+            <p>Михаил Романов спас нашу партию товара из Китая на 8,5 млн рублей от захвата фабрикой.</p>
+            <p class="body">Впервые услышал о схеме, когда китайский завод втайне регистрирует торговую марку заказчика в CNIPA, а потом требует выкуп за право вывезти груз. Проверили по его совету реестр Китая — оказалось, наш посредник уже подал заявку на наш знак. Срочно перехватили процесс и подали международную заявку по Мадридской системе с приоритетом.</p>
+            <p class="result">Предотвращён захват торговой марки в Китае</p>
+            <div class="review-meta"><strong>Артём Мельников</strong><span>Совладелец бренда автоэлектроники «DriveTech» · Контрактное производство в Шэньчжэне</span></div>
+          </article>
+        </div>
+        <p class="review-note">Тексты выше — демонстрационные примеры для макета. Перед публикацией замените их на подтверждённые отзывы реальных участников.</p>
+      </div>
+    </section>
+
+    <section class="materials" id="materials">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Практические материалы участникам</div>
+          <div>
+            <h2>Чек-листы и регламенты для скачивания.</h2>
+            <p>Готовые юридические документы, инструкции и чек-листы от юристов практики «Невский IP Law». Открыты для бесплатного скачивания.</p>
+          </div>
+        </div>
+
+        <div class="docs">
+          <article class="doc">
+            <div class="top"><span class="cat">Роспатент &amp; ФИПС</span><span class="fmt">PDF · 1 стр. A4</span></div>
+            <h3>Чек-лист: подготовка и проверка знака перед подачей в Роспатент</h3>
+            <p class="sub">Пошаговый аудит названия и логотипа для снижения риска отказа</p>
+            <p>Исчерпывающий перечень шагов для самостоятельной или профессиональной проверки бренда: выявление тождества, сходства до степени смешения и проверка по закрытым реестрам заявок.</p>
+            <div class="contains">
+              <b>Что содержит документ</b>
+              <span>Этап 1: проверка на тождество и сходство до степени смешения</span>
+              <span>Этап 2: проверка абсолютных оснований для отказа</span>
+            </div>
+            <div class="acts"><button class="btn-open" type="button" data-doc="checklist-rospatent">Смотреть онлайн</button></div>
+            <template id="tpl-checklist-rospatent">
+              <div class="doc-sec">
+                <h4>Этап 1: Проверка на тождество и сходство до степени смешения (ст. 1484 ГК РФ)</h4>
+                <ul>
+                  <li><span class="n">01</span>Поиск точных совпадений названия по открытому реестру зарегистрированных знаков Роспатента</li>
+                  <li><span class="n">02</span>Глубинный поиск по закрытой базе поданных заявок на регистрацию (находящихся на экспертизе)</li>
+                  <li><span class="n">03</span>Фонетический анализ: проверка созвучия на кириллице и латинице (напр., Fox / Фокс)</li>
+                  <li><span class="n">04</span>Семантический анализ: исключение смыслового сходства с зарегистрированными брендами</li>
+                  <li><span class="n">05</span>Визуальный поиск: проверка уникальности начертания и фирменного знака через графический индекс</li>
+                </ul>
+              </div>
+              <div class="doc-sec">
+                <h4>Этап 2: Проверка абсолютных оснований для отказа (ст. 1483 ГК РФ)</h4>
+                <ul>
+                  <li><span class="n">01</span>Проверка на описательность (указывает ли слово на вид, свойства, качество или назначение товара)</li>
+                  <li><span class="n">02</span>Проверка на ложность и способность ввести потребителя в заблуждение относительно производителя или страны</li>
+                  <li><span class="n">03</span>Исключение общепринятых терминов, аббревиатур и символов из основного охраняемого элемента</li>
+                  <li><span class="n">04</span>Оценка различительной способности названия для конкретной категории товаров</li>
+                </ul>
+              </div>
+              <div class="doc-sec">
+                <h4>Этап 3: Подбор классов МКТУ для e-commerce и маркетплейсов</h4>
+                <ul>
+                  <li><span class="n">01</span>Определение ключевого класса готовой продукции (напр., 25 класс — одежда, 03 — косметика, 09 — гаджеты)</li>
+                  <li><span class="n">02</span>Включение 35 класса МКТУ (услуги розничной торговли и продвижения товаров на маркетплейсах)</li>
+                  <li><span class="n">03</span>Резервирование смежных классов на перспективу расширения товарной линейки в течение 3 лет</li>
+                </ul>
+              </div>
+            </template>
+          </article>
+
+          <article class="doc">
+            <div class="top"><span class="cat">Маркетплейсы &amp; Ozon</span><span class="fmt">PDF · 1 стр. A4</span></div>
+            <h3>Регламент: снятие блокировки карточек на Ozon и Wildberries</h3>
+            <p class="sub">Юридический протокол при жалобе правообладателя или патентного тролля</p>
+            <p>Готовый алгоритм реагирования на претензии в кабинете селлера Ozon: формулировки встречных возражений, перечень доказательств добросовестности и регламент обращения к юристам площадки.</p>
+            <div class="contains">
+              <b>Что содержит документ</b>
+              <span>Шаг 1: экспресс-анализ жалобы и правообладателя (первые 24 часа)</span>
+              <span>Шаг 2: формирование встречного возражения для техподдержки маркетплейса</span>
+            </div>
+            <div class="acts"><button class="btn-open" type="button" data-doc="reglament-ozon-wb">Смотреть онлайн</button></div>
+            <template id="tpl-reglament-ozon-wb">
+              <div class="doc-sec">
+                <h4>Шаг 1: Экспресс-анализ жалобы и правообладателя (первые 24 часа)</h4>
+                <ul>
+                  <li><span class="n">01</span>Проверка номера свидетельства оппонента в официальном реестре Роспатента (действует ли знак)</li>
+                  <li><span class="n">02</span>Сверка классов МКТУ заявителя с категорией вашего заблокированного товара</li>
+                  <li><span class="n">03</span>Проверка даты приоритета: использовалось ли ваше наименование до подачи заявки оппонентом</li>
+                  <li><span class="n">04</span>Идентификация заявителя: реальный правообладатель, конкурент или патентный сквоттер</li>
+                </ul>
+              </div>
+              <div class="doc-sec">
+                <h4>Шаг 2: Формирование встречного возражения для техподдержки маркетплейса</h4>
+                <ul>
+                  <li><span class="n">01</span>Подготовка официального юридического ответа по структуре Ozon Brand ID</li>
+                  <li><span class="n">02</span>Прикрепление цепочки документов на товар: договоры с фабрикой, УПД, таможенные декларации</li>
+                  <li><span class="n">03</span>Доказательства отсутствия смешения: различие шрифтов, упаковок и смыслового восприятия</li>
+                  <li><span class="n">04</span>Предупреждение оппонента о встречном иске о взыскании убытков от простоя карточки (ст. 15 ГК РФ)</li>
+                </ul>
+              </div>
+              <div class="doc-sec">
+                <h4>Шаг 3: Стратегия при отказе добровольной разблокировки</h4>
+                <ul>
+                  <li><span class="n">01</span>Направление досудебной претензии заявителю с требованием отзыва необоснованной жалобы</li>
+                  <li><span class="n">02</span>Подача заявления в Палату по патентным спорам (ППС) об аннулировании знака конкурента</li>
+                  <li><span class="n">03</span>Обращение в ФАС по факту недобросовестной конкуренции (ст. 14.4 Закона № 135-ФЗ)</li>
+                </ul>
+              </div>
+            </template>
+          </article>
+
+          <article class="doc">
+            <div class="top"><span class="cat">Авторские права</span><span class="fmt">PDF · 1 стр. A4</span></div>
+            <h3>Шаблон договора авторского заказа с дизайнером упаковки и логотипа</h3>
+            <p class="sub">Юридически безопасное отчуждение исключительных прав в полном объёме (ст. 1288 ГК РФ)</p>
+            <p>Образец ключевых пунктов договора и акта приёма-передачи с дизайнером. Защищает от претензий исполнителя и подтверждает чистоту прав при регистрации бренда в Роспатенте.</p>
+            <div class="contains">
+              <b>Что содержит документ</b>
+              <span>Обязательные формулировки в договоре авторского заказа</span>
+              <span>Состав обязательных приложений и акта приёма-передачи</span>
+            </div>
+            <div class="acts"><button class="btn-open" type="button" data-doc="template-designer-contract">Смотреть онлайн</button></div>
+            <template id="tpl-template-designer-contract">
+              <div class="doc-sec">
+                <h4>Обязательные формулировки в договоре авторского заказа</h4>
+                <ul>
+                  <li><span class="n">01</span>Условие о полном отчуждении исключительного права на созданный логотип/дизайн заказчику с момента подписания акта</li>
+                  <li><span class="n">02</span>Гарантия автора о создании объекта собственным творческим трудом без использования чужих элементов и стоков</li>
+                  <li><span class="n">03</span>Обязательство автора возместить любые убытки и штрафы в случае предъявления претензий третьими лицами</li>
+                  <li><span class="n">04</span>Согласие автора на внесение изменений, переработку и обнародование без указания имени</li>
+                </ul>
+              </div>
+              <div class="doc-sec">
+                <h4>Состав обязательных приложений и акта приёма-передачи</h4>
+                <ul>
+                  <li><span class="n">01</span>Акт приёма-передачи прав с детальным графическим отображением всех утверждённых макетов</li>
+                  <li><span class="n">02</span>Передача векторных исходников в редактируемых форматах (.AI, .EPS, .SVG, шрифты)</li>
+                  <li><span class="n">03</span>Письменное подтверждение оплаты авторского вознаграждения (платёжное поручение или банковская выписка)</li>
+                </ul>
+              </div>
+            </template>
+          </article>
+
+          <article class="doc">
+            <div class="top"><span class="cat">ВЭД &amp; Китай</span><span class="fmt">PDF · 1 стр. A4</span></div>
+            <h3>Памятка: контрактное производство в Китае и защита бренда при импорте</h3>
+            <p class="sub">Как предотвратить захват марки фабрикой в CNIPA и остановить контрафакт на таможне РФ</p>
+            <p>Практическое руководство для селлеров, заказывающих товары на фабриках Китая. Защита от перехвата торговой марки посредниками и механизм внесения знака в таможенный реестр (ТРОИС).</p>
+            <div class="contains">
+              <b>Что содержит документ</b>
+              <span>Правило 1: превентивная регистрация бренда в Китае (CNIPA)</span>
+              <span>Правило 2: защита поставок через Таможенный реестр (ТРОИС)</span>
+            </div>
+            <div class="acts"><button class="btn-open" type="button" data-doc="memo-china-ved">Смотреть онлайн</button></div>
+            <template id="tpl-memo-china-ved">
+              <div class="doc-sec">
+                <h4>Правило 1: Превентивная регистрация бренда в Китае (CNIPA)</h4>
+                <ul>
+                  <li><span class="n">01</span>Подача заявки в Китай до отправки финальных макетов упаковки и брендбука на фабрику</li>
+                  <li><span class="n">02</span>Регистрация китайского фонетического эквивалента бренда (иероглифического названия)</li>
+                  <li><span class="n">03</span>Использование 6-месячного конвенционного приоритета с даты первой подачи заявки в РФ</li>
+                  <li><span class="n">04</span>Запрет китайской стороне регистрировать бренд или сходные знаки на своё имя в контракте OEM</li>
+                </ul>
+              </div>
+              <div class="doc-sec">
+                <h4>Правило 2: Защита поставок через Таможенный реестр (ТРОИС)</h4>
+                <ul>
+                  <li><span class="n">01</span>Внесение зарегистрированного товарного знака в реестр Федеральной таможенной службы РФ</li>
+                  <li><span class="n">02</span>Указание уполномоченных импортёров: таможня автоматически задерживает грузы других компаний</li>
+                  <li><span class="n">03</span>Приостановление выпуска неавторизованных партий на 10 рабочих дней для проверки контрафакта</li>
+                </ul>
+              </div>
+            </template>
+          </article>
+        </div>
+
+        <div class="banner">
+          <div>
+            <h3>Полный комплект чек-листов и образцов документов высылается на email</h3>
+            <p>Зарегистрируйтесь на семинаре, чтобы получить расширенную презентацию спикеров, актуальные образцы претензий для Ozon и презентации с разборами судебной практики.</p>
+          </div>
+          <a class="cta" href="#registration" style="margin-top:0">Зарегистрироваться</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="checker" id="risk-checker">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Интерактивный аудит</div>
+          <div>
+            <h2>Экспресс-тест: риски вашего товарного знака.</h2>
+            <p>Ответьте на 4 вопроса за 60 секунд, чтобы оценить вероятность блокировки карточек на Ozon и отказа Роспатента.</p>
+          </div>
+        </div>
+
+        <div class="checker-wrap" id="quiz">
+          <div id="quizStep">
+            <div class="q-progress">
+              <span id="qCount">Вопрос 1 из 4</span>
+              <span id="qPct">25%</span>
+            </div>
+            <div class="q-bar"><i id="qBar"></i></div>
+            <h3 id="qTitle"></h3>
+            <div class="opts" id="qOpts"></div>
+            <button class="q-back" type="button" id="qBack" hidden>← Назад к предыдущему вопросу</button>
+          </div>
+          <div id="quizResult" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div>
+            <div class="kicker">Организатор семинара</div>
+            <h2>Невский IP law</h2>
+            <p class="subname">Юридическое общество имени Александра Невского</p>
+            <p>Специализированная юридическая практика, сосредоточенная на защите интеллектуальной собственности, брендов и цифровых активов. Мы не занимаемся общими делами — вся наша экспертиза сфокусирована на авторском праве, товарных знаках и патентных спорах.</p>
+            <p>В e-commerce мы защищаем селлеров от захвата карточек, снимаем блокировки на Ozon и выстраиваем правовую основу для масштабирования бизнеса.</p>
+          </div>
+          <div class="about-stats">
+            <div class="astat"><strong>10+</strong><b>Лет узкой специализации</b><span>Исключительно защита интеллектуальной собственности и товарных знаков</span></div>
+            <div class="astat"><strong>98%</strong><b>Успешных регистраций</b><span>Благодаря предварительному поиску и выверенной стратегии преодоления отказов</span></div>
+            <div class="astat"><strong>1000+</strong><b>Брендов под защитой</b><span>В том числе селлеры маркетплейсов с многомиллионными ежемесячными оборотами</span></div>
+            <div class="astat"><strong>СИП &amp; ППС</strong><b>Высшая судебная практика</b><span>Победы в Суде по интеллектуальным правам и Палате по патентным спорам</span></div>
+          </div>
+        </div>
+
+        <div class="comps">
+          <h3>Ключевые направления практики в e-commerce</h3>
+          <div class="comps-grid">
+            <div class="comp">
+              <i>01</i>
+              <b>Регистрация товарных знаков в Роспатенте (ФИПС)</b>
+              <span>Полный цикл: от глубинного патентного поиска по поданным заявкам до получения охранного свидетельства и внесения в таможенный реестр (ТРОИС).</span>
+            </div>
+            <div class="comp">
+              <i>02</i>
+              <b>Урегулирование споров на маркетплейсах</b>
+              <span>Оперативное снятие неправомерных блокировок карточек на Ozon, WB и Яндекс Маркет. Юридическая защита от патентных сквоттеров и контрафакта.</span>
+            </div>
+            <div class="comp">
+              <i>03</i>
+              <b>Оспаривание знаков в Палате по патентным спорам</b>
+              <span>Прекращение правовой охраны конкурирующих знаков в связи с неиспользованием (ст. 1486 ГК РФ) или недобросовестной регистрацией.</span>
+            </div>
+            <div class="comp">
+              <i>04</i>
+              <b>Судебная защита и взыскание компенсаций</b>
+              <span>Представительство в арбитражных судах РФ и СИП по искам о защите исключительных прав с взысканием компенсаций по ст. 1515 ГК РФ.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Частые вопросы</div>
+          <div>
+            <h2>Вопросы и ответы о семинаре.</h2>
+            <p>Все организационные и правовые детали участия в одном месте.</p>
+          </div>
+        </div>
+        <div class="faq-wrap">
+          <details open>
+            <summary>Будет ли доступна запись семинара?</summary>
+            <p class="ans">Да, запись будет предоставлена всем зарегистрированным участникам сроком на 7 дней. Однако мы рекомендуем присутствовать онлайн: в заключительной части спикеры проведут живой разбор кейсов участников, и вы сможете задать вопрос по своей конкретной ситуации в прямом эфире.</p>
+          </details>
+          <details>
+            <summary>Почему семинар бесплатный?</summary>
+            <p class="ans">Это открытое экспертное мероприятие юридической практики «Невский IP Law». Наша цель — повысить правовую грамотность предпринимателей в e-commerce и наглядно показать, как профессиональная защита предотвращает многомиллионные потери от блокировок и исков.</p>
+          </details>
+          <details>
+            <summary>Что делать, если карточку на Ozon уже заблокировали прямо сейчас?</summary>
+            <p class="ans">Не соглашайтесь на требования шантажистов и не признавайте вину без анализа документов. В форме регистрации укажите в вопросе спикеру или напишите на seminar@litman.ru детали блокировки. Мы подскажем первый шаг для составления возражения в поддержку Ozon ещё до начала семинара.</p>
+          </details>
+          <details>
+            <summary>Стоит ли участвовать, если бренд только на этапе запуска?</summary>
+            <p class="ans">Это идеальный момент! Исправить ошибки до подачи заявки в Роспатент и до печати упаковок в 10 раз дешевле, чем выкупать чужой знак или делать вынужденный ребрендинг после старта продаж.</p>
+          </details>
+          <details>
+            <summary>У меня уже есть свидетельство Роспатента. Зачем мне семинар?</summary>
+            <p class="ans">Наличие свидетельства не гарантирует 100% защиты. На семинаре мы разберём, как конкуренты аннулируют знаки через Палату по патентным спорам по признаку «неиспользования» (ст. 1486 ГК РФ), почему важны смежные классы МКТУ и как правильно настроить кабинет Ozon Brand ID.</p>
+          </details>
+          <details>
+            <summary>Сколько времени займёт семинар и в каком сервисе пройдёт трансляция?</summary>
+            <p class="ans">Семинар продлится ровно 90 минут: 30 минут — Роспатент и ошибки экспертизы, 30 минут — споры и блокировки на Ozon, 30 минут — ответы на вопросы и разбор кейсов. Трансляция пройдёт на закрытой вебинарной платформе, ссылка придёт на ваш email.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="docModal">
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="docModalTitle">
+        <button class="modal-close" type="button" id="docModalClose" aria-label="Закрыть">&times;</button>
+        <span class="badge" id="docModalCat"></span>
+        <h3 id="docModalTitle"></h3>
+        <p class="sub" id="docModalSub"></p>
+        <div id="docModalBody"></div>
+        <div class="modal-foot">
+          <p class="fine">Материал предоставлен юридической практикой «Невский IP Law» (seminar@litman.ru).</p>
+          <button class="btn-copy" type="button" id="docModalCopy">Скопировать текст</button>
+        </div>
+      </div>
+    </div>
+
+        <a id="register" aria-hidden="true"></a>
+<section class="registration" id="registration">
+      <div class="wrap reg-grid">
+        <div class="reg-copy">
+          <div class="kicker">Регистрация</div>
+          <h2>Забронируйте место на семинаре.</h2>
+          <p>Количество мест ограничено форматом интерактивного разбора. Оставьте контакты — мы подтвердим участие по email или телефону.</p>
+          <ul class="included">
+            <li>Доступ к 90 минутам прямого эфира</li>
+            <li>Возможность разбора вашего кейса спикерами</li>
+            <li>Презентация со статьями ГК РФ и чек-листами</li>
+            <li>Запись семинара на 7 дней</li>
+          </ul>
+          <div class="direct">Или напишите напрямую: <a href="mailto:seminar@litman.ru">seminar@litman.ru</a></div>
+        </div>
+
+        <form class="form" id="seminarForm">
+          <label for="name">Ваше имя</label>
+          <input id="name" name="name" type="text" autocomplete="name" required placeholder="Александр Иванов">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@company.ru">
+
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+7 (999) 000-00-00">
+
+          <label class="opt" for="brand">Название вашего бренда или магазина на Ozon / WB</label>
+          <input id="brand" name="brand" type="text" placeholder="Например: NordLine или ссылка на витрину">
+
+          <label class="opt" for="question">Ваш вопрос спикеру к семинару</label>
+          <textarea id="question" name="question" rows="2" placeholder="Опишите ситуацию, спор с конкурентом или вопрос по Роспатенту..."></textarea>
+
+          <div class="consent">
+            <input id="consent" name="consent" type="checkbox" checked>
+            <label for="consent">Согласен(на) на обработку персональных данных и подтверждение участия в соответствии с 152-ФЗ РФ</label>
+          </div>
+
+          <button class="submit" type="submit">Зарегистрироваться</button>
+          <div class="success" id="success">Спасибо. Заявка подготовлена. Мы свяжемся с вами для подтверждения участия.</div>
+          <p class="fine">Укажите бренд или спорную ситуацию — спикеры разберут типовые сценарии во время эфира.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Невский IP law</div>
+          <p>ООО «Юридическое общество имени Александра Невского»<br>
+          Бренд — Nevsky IP Law</p>
+        </div>
+        <div>
+          <div class="footer-nav">
+            <a href="#program">Программа</a>
+            <a href="#speakers">Спикеры</a>
+            <a href="#for-whom">Кому полезно</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#materials">Материалы</a>
+            <a href="#risk-checker">Тест рисков</a>
+            <a href="#about">О практике</a>
+            <a href="#faq">FAQ</a>
+            <a href="#registration">Регистрация</a>
+          </div>
+          <p>ОГРН: 1107746202233<br>
+          ИНН: 7706733891<br>
+          Юридический адрес: 119607, г. Москва, Раменский бульвар, д. 1<br>
+          E-mail: seminar@litman.ru</p>
+        </div>
+      </div>
+      <div class="copyright">© Невский IP law — семинар для предпринимателей и e-commerce</div>
+    </div>
+  </footer>
+
+  <script>
+    const WORKER = "https://seminar-catch.seminar-catch.workers.dev";
+
+    function beacon(path, data){
+      try{
+        var opts = {method: data ? 'POST' : 'GET', keepalive: true};
+        if(data) opts.headers = {'Content-Type':'application/x-www-form-urlencoded'};
+        fetch(WORKER + path, opts).catch(function(){});
+      }catch(e){}
+    }
+
+    // просмотр страницы: IP, UA, время, источник
+    beacon('/view?ref=' + encodeURIComponent(document.referrer || 'direct'), null);
+
+    document.getElementById('seminarForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const get = function(id) { return document.getElementById(id).value.trim(); };
+      const name = get('name');
+      const email = get('email');
+      const phone = get('phone');
+      const brand = get('brand');
+      const question = get('question');
+
+      if (!name || !email || !phone) return;
+      if (!document.getElementById('consent').checked) return;
+
+      // отправка в Worker (не блокируем форму)
+      try{
+        fetch(WORKER + '/lead', {
+          method:'POST',
+          keepalive:true,
+          headers:{'Content-Type':'application/x-www-form-urlencoded'},
+          body: new URLSearchParams({name:name, email:email, phone:phone, brand:brand, question:question}).toString()
+        }).catch(function(){});
+      }catch(err){}
+
+      var form = document.getElementById('seminarForm');
+      Array.prototype.forEach.call(form.children, function(el){ if (el.id !== 'success') el.style.display = 'none'; });
+      document.getElementById('success').style.display = 'block';
+    });
+
+    /* ---------- просмотр чек-листов ---------- */
+    const DOCS = {
+      'checklist-rospatent': {
+        cat: 'Роспатент & ФИПС',
+        title: 'Чек-лист: подготовка и проверка знака перед подачей в Роспатент',
+        sub: 'Пошаговый аудит названия и логотипа для снижения риска отказа'
+      },
+      'reglament-ozon-wb': {
+        cat: 'Маркетплейсы & Ozon',
+        title: 'Регламент: снятие блокировки карточек на Ozon и Wildberries',
+        sub: 'Юридический протокол при жалобе правообладателя или патентного тролля'
+      },
+      'template-designer-contract': {
+        cat: 'Авторские права',
+        title: 'Шаблон договора авторского заказа с дизайнером упаковки и логотипа',
+        sub: 'Юридически безопасное отчуждение исключительных прав в полном объёме (ст. 1288 ГК РФ)'
+      },
+      'memo-china-ved': {
+        cat: 'ВЭД & Китай',
+        title: 'Памятка: контрактное производство в Китае и защита бренда при импорте',
+        sub: 'Как предотвратить захват марки фабрикой в CNIPA и остановить контрафакт на таможне РФ'
+      }
     };
-    // отправка в Worker (не блокируем форму)
-    try{
-      fetch(WORKER + '/lead', {
-        method:'POST',
-        keepalive:true,
-        headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body: new URLSearchParams(payload).toString()
-      }).catch(function(){});
-    }catch(err){}
-    form.style.display = 'none';
-    document.getElementById('done').style.display = 'block';
-  });
-})();
-</script>
+
+    const modal = document.getElementById('docModal');
+    const modalBody = document.getElementById('docModalBody');
+    const modalCopy = document.getElementById('docModalCopy');
+    let activeDoc = null;
+
+    function openDoc(id) {
+      const doc = DOCS[id];
+      const tpl = document.getElementById('tpl-' + id);
+      if (!doc || !tpl) return;
+      activeDoc = id;
+      document.getElementById('docModalCat').textContent = doc.cat;
+      document.getElementById('docModalTitle').textContent = doc.title;
+      document.getElementById('docModalSub').textContent = doc.sub;
+      modalBody.innerHTML = '';
+      modalBody.appendChild(tpl.content.cloneNode(true));
+      modalCopy.textContent = 'Скопировать текст';
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDoc() {
+      modal.classList.remove('open');
+      modalBody.innerHTML = '';
+      activeDoc = null;
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-doc]').forEach(function(btn) {
+      btn.addEventListener('click', function() { openDoc(btn.getAttribute('data-doc')); });
+    });
+    document.getElementById('docModalClose').addEventListener('click', closeDoc);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeDoc(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) closeDoc();
+    });
+
+    modalCopy.addEventListener('click', function() {
+      if (!activeDoc) return;
+      const doc = DOCS[activeDoc];
+      const lines = [doc.title, doc.sub, ''];
+      modalBody.querySelectorAll('.doc-sec').forEach(function(sec) {
+        lines.push('=== ' + sec.querySelector('h4').textContent + ' ===');
+        sec.querySelectorAll('li').forEach(function(li, i) {
+          lines.push('[ ] ' + (i + 1) + '. ' + li.textContent.trim());
+        });
+        lines.push('');
+      });
+      lines.push('Материал предоставлен юридической практикой «Невский IP Law» (seminar@litman.ru)');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lines.join('\n'));
+        modalCopy.textContent = 'Текст скопирован';
+        setTimeout(function() { modalCopy.textContent = 'Скопировать текст'; }, 2000);
+      } else {
+        modalCopy.textContent = 'Не удалось скопировать';
+        setTimeout(function() { modalCopy.textContent = 'Скопировать текст'; }, 2000);
+      }
+    });
+
+    /* ---------- экспресс-тест рисков ---------- */
+    const QUIZ = [
+      {
+        title: '1. Каков текущий статус прав на ваше торговое наименование?',
+        options: [
+          { label: 'Получено официальное свидетельство Роспатента на наше юрлицо/ИП', score: 0 },
+          { label: 'Заявка подана в ФИПС, сейчас идёт экспертиза по существу', score: 15 },
+          { label: 'Продаём под названием, но заявка в Роспатент ещё не подавалась', score: 35 },
+          { label: 'Торгуем товаром под названием фабрики или стороннего поставщика', score: 40 }
+        ]
+      },
+      {
+        title: '2. Проводилась ли полная проверка на тождество и сходство до степени смешения?',
+        options: [
+          { label: 'Да, патентные поверенные провели официальный поиск по закрытым базам ФИПС', score: 0 },
+          { label: 'Искали сами в поисковиках и в поиске на Ozon / WB', score: 20 },
+          { label: 'Поиск не проводился, название придумали сами и надеемся на уникальность', score: 30 }
+        ]
+      },
+      {
+        title: '3. Зарегистрирован ли бренд в реестре брендов маркетплейса (Ozon Brand ID)?',
+        options: [
+          { label: 'Да, бренд подтверждён через свидетельство на маркетплейсе', score: 0 },
+          { label: 'В процессе подтверждения / загрузили документы', score: 10 },
+          { label: 'Нет, бренд не привязан, карточки созданы под общим или сторонним названием', score: 20 }
+        ]
+      },
+      {
+        title: '4. Сталкивались ли вы с сигналами от конкурентов или площадки?',
+        options: [
+          { label: 'Никогда, инцидентов и запросов не было', score: 0 },
+          { label: 'Были анонимные угрозы или требования убрать товар в чате продавца', score: 20 },
+          { label: 'Карточку уже временно блокировали по жалобе на товарный знак', score: 35 },
+          { label: 'Получена официальная досудебная претензия с требованием компенсации', score: 45 }
+        ]
+      }
+    ];
+
+    const qTitle = document.getElementById('qTitle');
+    const qOpts = document.getElementById('qOpts');
+    const qBack = document.getElementById('qBack');
+    const qStep = document.getElementById('quizStep');
+    const qResult = document.getElementById('quizResult');
+    let step = 0;
+    const answers = {};
+
+    function renderStep() {
+      const q = QUIZ[step];
+      const pct = Math.round(((step + 1) / QUIZ.length) * 100);
+      document.getElementById('qCount').textContent = 'Вопрос ' + (step + 1) + ' из ' + QUIZ.length;
+      document.getElementById('qPct').textContent = pct + '%';
+      document.getElementById('qBar').style.width = pct + '%';
+      qTitle.textContent = q.title;
+      qBack.hidden = step === 0;
+      qOpts.innerHTML = '';
+
+      q.options.forEach(function(opt, i) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'opt-btn';
+        const letter = String.fromCharCode(65 + i);
+        btn.innerHTML = '<span class="letter">' + letter + '</span><span></span>';
+        btn.lastChild.textContent = opt.label;
+        btn.addEventListener('click', function() {
+          answers[step] = i;
+          if (step < QUIZ.length - 1) {
+            step += 1;
+            renderStep();
+          } else {
+            renderResult();
+          }
+        });
+        qOpts.appendChild(btn);
+      });
+    }
+
+    function verdictFor(score) {
+      if (score <= 20) {
+        return {
+          cls: 'low', level: 'Минимальный',
+          verdict: 'Базовая защита выстроена, но важно проверить классы МКТУ',
+          desc: 'У вас есть свидетельство или официальная регистрация. На семинаре вы узнаете, как защитить бренд от аннулирования конкурентами по неиспользованию (ст. 1486 ГК РФ) и как расширить защиту на новые категории товаров.'
+        };
+      }
+      if (score <= 60) {
+        return {
+          cls: 'mid', level: 'Умеренный риск',
+          verdict: 'Высокая уязвимость перед патентным троллингом и блокировками Ozon',
+          desc: 'Пока свидетельство не получено или проверка не завершена, конкуренты могут опередить вас с подачей заявки в ФИПС. Любая жалоба на маркетплейсе приведёт к приостановке продаж в самый пиковый сезон.'
+        };
+      }
+      return {
+        cls: 'high', level: 'Критический риск',
+        verdict: 'Прямая угроза блокировки карточек и иска по ст. 1515 ГК РФ до 5 000 000 ₽',
+        desc: 'Ваш бизнес работает в слепой зоне. При поступлении официальной претензии маркетплейс заблокирует товары без разбирательств. Вам срочно необходима стратегия защиты или встречного оспаривания прав.'
+      };
+    }
+
+    function renderResult() {
+      const score = QUIZ.reduce(function(sum, q, i) {
+        return sum + (answers[i] !== undefined ? q.options[answers[i]].score : 0);
+      }, 0);
+      const r = verdictFor(score);
+
+      qStep.hidden = true;
+      qResult.hidden = false;
+      qResult.innerHTML =
+        '<div class="vresult ' + r.cls + '">' +
+          '<div class="result-top">' +
+            '<div>' +
+              '<span class="lvl">Оценка правовой уязвимости</span>' +
+              '<p class="val">' + r.level + '</p>' +
+            '</div>' +
+            '<button class="q-reset" type="button" id="qReset">Пройти заново</button>' +
+          '</div>' +
+          '<p class="verdict">' + r.verdict + '</p>' +
+          '<p class="desc">' + r.desc + '</p>' +
+        '</div>' +
+        '<div class="resend">' +
+          '<p>Укажите название вашего бренда или магазина — эксперты «Невский IP Law» проверят его и дадут рекомендации. Уровень риска <b>' + r.level + '</b> будет передан вместе с заявкой.</p>' +
+          '<div class="resend-row">' +
+            '<input type="text" id="quizBrand" placeholder="Название вашего бренда или ссылка на магазин...">' +
+            '<a class="cta" href="#registration" id="quizGo" style="margin-top:0">Перейти к регистрации</a>' +
+          '</div>' +
+        '</div>';
+
+      document.getElementById('qReset').addEventListener('click', function() {
+        step = 0;
+        for (const k in answers) delete answers[k];
+        qResult.hidden = true;
+        qResult.innerHTML = '';
+        qStep.hidden = false;
+        renderStep();
+      });
+
+      document.getElementById('quizGo').addEventListener('click', function() {
+        const brand = document.getElementById('quizBrand').value.trim();
+        if (!brand) return;
+        const field = document.getElementById('brand');
+        const question = document.getElementById('question');
+        field.value = brand;
+        question.value = 'Экспресс-тест: риск — ' + r.level + '. Бренд: ' + brand;
+        document.getElementById('quizBrand').value = '';
+      });
+    }
+
+    qBack.addEventListener('click', function() {
+      if (step > 0) { step -= 1; renderStep(); }
+    });
+
+    renderStep();
+  </script>
 </body>
 </html>
