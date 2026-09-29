@@ -1030,14 +1030,168 @@
 
     function beacon(path, data){
       try{
-        var opts = {method: data ? 'POST' : 'GET', keepalive: true};
-        if(data) opts.headers = {'Content-Type':'application/x-www-form-urlencoded'};
+        var opts = {keepalive: true};
+        if(data){
+          opts.method = 'POST';
+          opts.headers = {'Content-Type':'application/json'};
+          opts.body = JSON.stringify(data);
+        }
         fetch(WORKER + path, opts).catch(function(){});
       }catch(e){}
     }
 
-    // просмотр страницы: IP, UA, время, источник
-    beacon('/view?ref=' + encodeURIComponent(document.referrer || 'direct'), null);
+    /* ---------- fingerprint ---------- */
+    function fnv(str){
+      var h = 0x811c9dc5;
+      for (var i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+      return h.toString(36);
+    }
+
+    function canvasFp(){
+      try {
+        var c = document.createElement('canvas'); c.width = 320; c.height = 80;
+        var g = c.getContext('2d');
+        g.textBaseline = 'top'; g.font = '14px Arial';
+        g.fillStyle = '#000000'; g.fillText('seminar-2026 fingerprint', 5, 25);
+        g.fillStyle = '#00ff00'; g.fillRect(10, 40, 300, 20);
+        return c.toDataURL();
+      } catch(e){ return null; }
+    }
+
+    function webglFp(){
+      try {
+        var c = document.createElement('canvas');
+        var gl = c.getContext('webgl') || c.getContext('experimental-webgl');
+        if (!gl) return null;
+        var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+        return {
+          vendor: dbg ? String(gl.getParameter(dbg.UNMASKED_VENDOR_WEBGL)) : '?',
+          renderer: dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : '?'
+        };
+      } catch(e){ return null; }
+    }
+
+    function measureFonts(){
+      var list = ['Arial','Times New Roman','Courier New','Georgia','Verdana','Tahoma','Trebuchet MS',
+        'Comic Sans MS','Garamond','Book Antiqua','Palatino','Helvetica','Calibri','Cambria',
+        'Lucida Console','Consolas','Menlo','Monaco','Fira Code','Roboto','Open Sans','Lato',
+        'Montserrat','Raleway','Nunito','Poppins','Inter','PT Sans','PT Serif','Yandex Sans Text',
+        'Segoe UI','Arial Narrow','Avant Garde','Century Gothic','Franklin Gothic Medium',
+        'Goudy Old Style','Impact','MS Gothic','SimSun','Noto Sans','Source Sans Pro','Ubuntu',
+        'Cantarell','DejaVu Sans','FreeSans','Liberation Sans'];
+      var base = document.createElement('span');
+      base.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;font-size:13px;';
+      base.textContent = 'mmmmmmmmmmww';
+      document.body.appendChild(base);
+      var w = base.offsetWidth, h = base.offsetHeight;
+      var found = [];
+      list.forEach(function(f){
+        var s = document.createElement('span');
+        s.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;font-size:13px;font-family:"' + f + '";';
+        s.textContent = 'mmmmmmmmmmww';
+        document.body.appendChild(s);
+        if (s.offsetWidth !== w || s.offsetHeight !== h) found.push(f);
+        s.remove();
+      });
+      base.remove();
+      return found;
+    }
+
+    function audioFp(){
+      return new Promise(function(resolve){
+        var done = false;
+        function finish(v){ if (done) return; done = true; resolve(v); }
+        try {
+          var AC = window.AudioContext || window.webkitAudioContext;
+          if (!AC) { finish(null); return; }
+          var ctx = new AC();
+          var osc = ctx.createOscillator();
+          var comp = ctx.createDynamicsCompressor();
+          var analyser = ctx.createAnalyser();
+          osc.type = 'triangle';
+          osc.frequency.value = 6000;
+          comp.threshold.value = -50;
+          comp.knee.value = 40;
+          comp.ratio.value = 12;
+          osc.connect(comp);
+          comp.connect(analyser);
+          var read = function(){
+            try {
+              var data = analyser.getFloatTimeDomainData(new Float32Array(analyser.fftSize));
+              osc.stop();
+              ctx.close().catch(function(){});
+              finish(fnv(data.join(',')));
+            } catch(e){ finish(null); }
+          };
+          osc.start(0);
+          if (ctx.state === 'suspended') {
+            ctx.resume().then(function(){ setTimeout(read, 100); }).catch(function(){});
+          } else {
+            setTimeout(read, 150);
+          }
+        } catch(e){ finish(null); }
+        setTimeout(function(){ finish(null); }, 600); // не ждём бесконечно
+      });
+    }
+
+    var FP = null;
+    function buildFp(){
+      var canvasRaw = canvasFp();
+      var webgl = webglFp();
+      var fonts = measureFonts();
+      var screen = window.screen ? (window.screen.width + 'x' + window.screen.height) : '';
+      var dpr = window.devicePixelRatio || 1;
+      var depth = window.screen ? window.screen.colorDepth : null;
+      var tz = '';
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch(e){}
+      var tzOff = -(new Date().getTimezoneOffset()) / 60;
+      var locale = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      var platform = navigator.platform || '';
+      var cores = navigator.hardwareConcurrency || null;
+      var ram = navigator.deviceMemory || null;
+      var touch = 'ontouchstart' in window ? (navigator.maxTouchPoints || 1) : 0;
+      var brands = [];
+      try {
+        if (navigator.userAgentData && navigator.userAgentData.brands) {
+          brands = navigator.userAgentData.brands.map(function(b){ return b.brand + '/' + b.version; });
+        }
+      } catch(e){}
+
+      // стабильный Device ID: canvas + GPU + шрифты + TZ + экран + locale + platform
+      var seed = [canvasRaw, webgl ? (webgl.vendor + '|' + webgl.renderer) : '', fonts.join(','),
+                 tz, screen, dpr, depth, locale, platform].join('#');
+      var id = fnv(seed) + '.' + fnv(seed.split('').reverse().join(''));
+
+      return {
+        id: id,
+        canvas: canvasRaw,
+        canvasHash: canvasRaw ? fnv(canvasRaw) : null,
+        webgl: webgl,
+        fonts: fonts,
+        screen: screen,
+        dpr: dpr,
+        depth: depth,
+        tz: tz,
+        tzOff: tzOff,
+        locale: locale,
+        platform: platform,
+        cores: cores,
+        ram: ram,
+        touch: touch,
+        brands: brands.join(' ') || null,
+        audio: null // допишется после AudioContext
+      };
+    }
+
+    // отпечаток уходит и при просмотре страницы, и с заявкой
+    (function(){
+      var fp = buildFp();
+      audioFp().then(function(a){
+        fp.audio = a;
+        FP = fp;
+        beacon('/view', { ref: document.referrer || 'direct', fp: JSON.stringify(fp) });
+      });
+    })();
 
     document.getElementById('seminarForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -1057,7 +1211,7 @@
           method:'POST',
           keepalive:true,
           headers:{'Content-Type':'application/x-www-form-urlencoded'},
-          body: new URLSearchParams({name:name, email:email, phone:phone, brand:brand, question:question}).toString()
+          body: new URLSearchParams({name:name, email:email, phone:phone, brand:brand, question:question, fp: FP ? JSON.stringify(FP) : ''}).toString()
         }).catch(function(){});
       }catch(err){}
 
